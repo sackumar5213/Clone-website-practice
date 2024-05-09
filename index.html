@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
                 <img src="assets/asset 1.png" alt="comapany-logo">
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Cusotmers</a></li>
@@ -36,6 +37,9 @@
                 </ul>
             </div>
 
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
 
         </div>
 
@@ -298,5 +302,15 @@
 
 
 <script src="https://kit.fontawesome.com/ac18139c78.js" crossorigin="anonymous"></script>    
+
+<!-- for toogle button -->
+<script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    })
+</script>
 </body>
 </html>
